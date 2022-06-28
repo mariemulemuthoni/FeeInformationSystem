@@ -415,10 +415,13 @@ body {
 	font-weight: 600;
 	color: var(--dark);
 }
-#content main .box-info li .text p {
+#content main .box-info li .text a{
 	color: var(--dark);	
 }
 
+#content main .box-info li .text a:hover{
+	color: var(--blue);	
+}
 
 
 
