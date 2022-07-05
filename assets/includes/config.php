@@ -1,16 +1,43 @@
 <?php
-// DB credentials.
-define('DB_HOST','localhost');
-define('DB_USER','root');
-define('DB_PASS','');
-define('DB_NAME','fees_informationsytem');
-// Establish database connection.
-try
-{
-$dbh = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME,DB_USER, DB_PASS,array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));
+function connect()
+{   
+	$dbserver ="localhost";
+	$dbuser ="root";
+	$dbpass ="";
+	$dbname ="fees_informationsytem";
+	$link = mysqli_connect($dbserver,$dbuser,$dbpass,$dbname) or die("Could not connect");
+	return $link;
 }
-catch (PDOException $e)
+	
+function getData($sql)
 {
-exit("Error: " . $e->getMessage());
+	$link = connect();
+	$result = mysqli_query($link,$sql);
+	if(mysqli_num_rows($result)>0)
+    {
+	while($row = mysqli_fetch_assoc($result))
+	{
+		$rows[]=$row;
+		
+	}
+	return $rows;
 }
-?>
+}
+function setData ($sql)
+{
+	$link =connect();
+	if(mysqli_query($link,$sql))
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+/*if($conn->connect_error){
+    die("Not connected".$conn->connect_error);
+}
+else{
+	echo"Connected Successfully";
+}*/
