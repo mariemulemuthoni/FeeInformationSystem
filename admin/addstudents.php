@@ -1,5 +1,5 @@
 <?php
-//include ('assets/includes/config.php')
+include_once 'assets/includes/config.php'
 ?>
 <!DOCTYPE html>
 
