@@ -41,3 +41,4 @@ function setData ($sql)
 else{
 	echo"Connected Successfully";
 }*/
+?>

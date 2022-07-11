@@ -1,5 +1,5 @@
 <?php
-include ('assets/includes/config.php')
+//include ('assets/includes/config.php')
 ?>
 <!DOCTYPE html>
 
@@ -46,9 +46,9 @@ include ('assets/includes/config.php')
                             <label>Gender</label>
                             <select name="gender" required>
                                 <option disabled selected>Select student's gender</option>
-                                <option>Male</option>
-                                <option>Female</option>
-                                <option>Others</option>
+                                <option value ="Male">Male</option>
+                                <option value ="Female">Female</option>
+                                <option value="Others">Others</option>
                             </select>
                         </div>
                         <div class="input-field">
@@ -99,8 +99,8 @@ include ('assets/includes/config.php')
                         </div>
 
                         <div class="input-field">
-                            <label>Occupation</label>
-                            <input type="text"name="occupation" placeholder="Enter Parent's occupation" required>
+                            <label>Password</label>
+                            <input type="password"name="password" placeholder="Enter Student's Password" required>
                         </div>
 
                     </div>
