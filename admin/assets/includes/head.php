@@ -6,6 +6,7 @@
         <span class="text">Admin Panel</span>
     </a>
     <ul class="side-menu top">
+        <div>
         <li class="active">
             <a href="dashboard.php" target="_self">
                 <i class='bx bxs-dashboard' ></i>
@@ -13,66 +14,117 @@
             </a>
             
         </li>
-        <li>
-            <a class=" dropdown-toggle " href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="false">
-                <i class='bx bxs-school'></i>
-                <span class="text">Classes</span>
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <li><a class="dropdown-item" href="addclass.php">Add class</a></li>
-              <li><a class="dropdown-item" href="manageclasses.php">Manage classes</a></li>
-            </ul>
-        </li>
-        <li>
-            <a class=" dropdown-toggle " href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="false" >
-                <i class='bx bx-body'></i>
-                <span class="text">Students</span>
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <li><a class="dropdown-item" href="addstudents.php">Add student</a></li>
-                <li><a class="dropdown-item" href="managestudents.php">Manage students</a></li>
+        </div>
 
-            </ul>
-        </li>
-        <li>
-            <a href="managepayments.php">
-                <i class='bx bxs-folder'></i>
+
+
+
+<div class="accordion" id="accordionExample">
+  <div class="accordion-item ">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+        <a href=""> 
+        <i class='bx bxs-school'></i>
+         <span class="text">Classes</span>
+      </a>
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+      <li><a class="dropdown-item" href="addclass.php">Add class</a></li>
+              <li><a class="dropdown-item" href="manageclasses.php">Manage classes</a></li>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+      <a href=""> 
+      <i class='bx bx-body'></i>
+      <span class="text">Students</span>
+      </a>
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+      <li><a class="dropdown-item" href="addstudents.php" target="_self">Add student</a></li>
+       <li><a class="dropdown-item" href="managestudents.php">Manage students</a></li>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+      <a href=""> 
+      <i class='bx bxs-folder'></i>
                 <span class="text">Payment Methods</span>
-            </a>
-        </li>
-        <li>
-            <a href="viewFeepayment.php">
-                <i class='bx bx-folder' ></i>
+      </a>
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse " aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+      <li><a class="dropdown-item" href="addPaymentMethod.php">Add Payment Method</a></li>
+              <li><a class="dropdown-item" href="managePaymentMethod.php">Manage Payment methods</a></li>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingFour">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+      <a href=""> 
+      <i class='bx bx-folder' ></i>
                 <span class="text">Total Fees Paid</span>
-            </a>
-        </li>
-        <li>
-            <a href="viewFeebalance.php">
-                <i class='bx bx-folder-open' ></i>
+      </a>
+      </button>
+    </h2>
+    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+      <li><a class="dropdown-item" href=""> Total Fees per Class</a></li>
+              <li><a class="dropdown-item" href="">Total Fees for the School</a></li>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingFive">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+      <a href=""> 
+      <i class='bx bx-folder-open' ></i>
                 <span class="text">Total Fees Balance</span>
-            </a>
-        </li>
-        <li>
-            <a href="viewParentscontacts.php">
-                <i class='bx bxs-message-dots' ></i>
-                <span class="text">Parents Contacts</span>
-            </a>
-        </li>
-        <li>
-            <a href="viewFeesreport.php">
-                <i class='bx bxs-file-pdf'></i>
+      </a>
+      </button>
+    </h2>
+    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+      <li><a class="dropdown-item" href=""> Total Fees Balance per class</a></li>
+     <li><a class="dropdown-item" href=""> Total Fees Balance</a></li>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingSix">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+      <a href=""> 
+      <i class='bx bxs-file-pdf'></i>
                 <span class="text">Fees report</span>
-            </a>
-        </li>
-    </ul>
-    <ul class="side-menu">
-        <li>
-            <a href="logout.php" class="logout">
-                <i class='bx bxs-log-out-circle' ></i>
-                <span class="text">Logout</span>
-            </a>
-        </li>
-    </ul>
+      </a>
+      </button>
+    </h2>
+    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+      <li><a class="dropdown-item" href="">Download Fees Report</a></li>
+              <li><a class="dropdown-item" href="">View Fees Report</a></li>
+      </div>
+    </div>
+  </div>
+  
+  
+</div>
+</ul>
+
+
+    
+
+
 </section>
 <!-- SIDEBAR -->
 
@@ -83,7 +135,7 @@
 		<!-- NAVBAR -->
 		<nav>
 			<i class='bx bx-menu' ></i>
-			<a href="#" class="nav-link">Categories</a>
+			
 			<form action="#">
 				<div class="form-input">
 					<input type="search" placeholder="Search...">
@@ -96,9 +148,21 @@
 				<i class='bx bxs-bell' ></i>
 				<span class="num">1</span>
 			</a>
-			<a href="#" class="profile">
-				<p>Profile</p>
-			</a>
+
+
+      <ul class="nav nav-tabs">
+  
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Profile</a>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">View Profile</a></li>
+      <li><a class="dropdown-item" href="#">Change Password</a></li>
+      <li><a class="dropdown-item" href="logout.php">Log out</a></li>
+    </ul>
+  </li>
+</ul>
+      
+			
 		</nav>
 		<!-- NAVBAR -->
     </section>

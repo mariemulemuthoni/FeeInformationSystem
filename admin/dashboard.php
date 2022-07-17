@@ -1,4 +1,7 @@
 <?php
+session_start();
+
+if (isset($_SESSION['adm_ID']) && isset($_SESSION['Adm_UName'])) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +28,7 @@
 		<main>
 			<div class="head-title">
 				<div class="left">
-					<h1>Dashboard</h1>
+				<h2>Welcome, <?php echo $_SESSION['adm_FName']; ?></h2>
 					<ul class="breadcrumb">
 						<li>
 							<a href="dashboard.php">Dashboard</a>
@@ -92,7 +95,9 @@
 						<p><a href = "viewFeesreport.php">Generate Fees Report</a></p>
 					</span>
 				</li>
+	
 			</ul>
+			</main>
     </section>
 
 
@@ -104,3 +109,9 @@
 
  </body>
 </html>
+<?php 
+}else{
+     header("Location: index.php");
+     exit();
+}
+ ?>

@@ -26,15 +26,11 @@ include_once 'assets/includes/configure.php';
 		<main>
 			<div class="head-title">
 				<div class="left">
-                <form method="post" action="assets/includes/class_process.php">
-                    <h1>Add a New Class</h1>
+                <form method="post" action="assets/includes/payment_process.php">
+                    <h1>Add Payment Method</h1>
   <div class="mb-3">
-    <label for="exampleInputClass" class="form-label">Class Name</label>
-    <input type="text" class="form-control" id="exampleInputClass"  name="cname" placeholder="Class Name" >
-  </div>
-  <div class="mb-3">
-    <label for="exampleInputTerm" class="form-label">Term </label>
-    <input type="text" class="form-control" id="exampleInputTerm"  name="term" placeholder="Term" >
+    <label for="exampleInputMethod" class="form-label">Payment Method Name</label>
+    <input type="text" class="form-control" id="exampleInputMethod"  name="pmname" placeholder="Payment Method Name" >
   </div>
   <button type="submit" class="btn btn-primary" name="submit" >Submit</button>
 </form>

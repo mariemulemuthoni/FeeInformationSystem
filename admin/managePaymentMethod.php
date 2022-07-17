@@ -1,6 +1,6 @@
 <?php
 include_once 'assets/includes/configure.php';
-$sql = "SELECT * FROM tbl_class; ";
+$sql = "SELECT * FROM tbl_paymentmethods; ";
 $result = mysqli_query($conn, $sql);
 $resultCheck = mysqli_num_rows($result);
 ?>
@@ -31,11 +31,9 @@ $resultCheck = mysqli_num_rows($result);
 
            <thead>
                 <tr>
-                    <th scope="col" >Class ID</th>
-                    <th scope="col" >Class Name</th>
-                    <th scope="col" >Class Date Created</th>
-                    <th scope="col" >Class Update Date</th>
-                    <th scope="col" >Term ID</th>
+                    <th scope="col" >Method ID</th>
+                    <th scope="col" >Payment Method Name</th>
+                    
                 </tr>
             </thead>
             <tbody>
@@ -45,14 +43,10 @@ $resultCheck = mysqli_num_rows($result);
                 {
               ?>
                 <tr>
-                <td><?php echo $rows['class']; ?></th>
-                <td><?php echo $rows['class_Name']; ?></th>
-                <td><?php echo $rows['class_DateCreated']; ?></th>
-                <td><?php echo $rows['class_UpdateDate']; ?></th>
-                <td><?php echo $rows['Term_ID']; ?></th>
-                <td><a href= "edit.php?id=<?=$rows['class']?>" class="btn btn-info">Edit</a></td>
+                <td><?php echo $rows['Method_ID']; ?></td>
+                <td><?php echo $rows['Payment_methodName']; ?></td>
+                <td><a href= "edit.php?id=<?=$rows['Method_ID']?>" class="btn btn-info">Edit</a></td>
                 <td><a href= "" class="btn btn-danger">Delete</a></td>
-                
 
                 <?php
                  }

@@ -1,3 +1,10 @@
+<?php
+include_once 'assets/includes/configure.php';
+$sql = "SELECT * FROM tbl_student; ";
+$result = mysqli_query($conn, $sql);
+$resultCheck = mysqli_num_rows($result);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -19,34 +26,55 @@
 
 <section id="content">
   <main>
-  <div class="left">
-       <table class="table">
+  <div class="left table-responsive">
+       <table class="table table-hover w-auto">
+
            <thead>
                 <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col" >Student ID</th>
+                    <th scope="col" >Admission Number</th>
+                    <th scope="col" >First Name</th>
+                    <th scope="col" >Last Name</th>
+                    <th scope="col" >Date of Birth</th>
+                    <th scope="col" >Gender</th>
+                    <th scope="col" >Student's Address</th>
+                    <th scope="col" >Registeration Date</th>
+                    <th scope="col" >Password</th>
+                    <th scope="col" >Update Date</th>
+                    <th scope="col" >Class</th>
+                    <th scope="col" >Action</th>
                 </tr>
             </thead>
             <tbody>
+              <?php
+               if ($resultCheck > 0) {
+                $i = 0;
+                while ($rows = mysqli_fetch_assoc($result))
+                {
+                  $i++;
+              ?>
                 <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
+                  <th scope = "row"><?=$i?></th>
+                
+                <td ><?php echo $rows['stud_AdmNumber']; ?></td>
+                <td><?php echo $rows['stud_FName']; ?></td>
+                <td><?php echo $rows['stud_LName']; ?></td>
+                <td><?php echo $rows['stud_DayofBirth'],$rows['stud_MonthofBirth'],$rows['stud_YearofBirth']; ?></td>
+                <td><?php echo $rows['stud_Gender']; ?></td>
+                <td><?php echo $rows['stud_Address']; ?></td>
+                <td><?php echo $rows['stud_RegDate']; ?></td>
+                <td><?php echo $rows['stud_Password']; ?></td>
+                <td><?php echo $rows['stud_UpdateDate']; ?></td>
+                <td><?php echo $rows['class_ID']; ?></td>
+                <td><a href= "edit.php?id=<?=$rows['stud_ID']?>" class="btn btn-info">Edit</a></td>
+                <td><a href= "delete.php?id=<?=$rows['stud_ID']?>" class="btn btn-danger">Delete</a></td>
                 </tr>
-                <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                </tr>
-                <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-                </tr>
+
+                <?php
+                 }
+                }
+               ?>
+                
             </tbody>
         </table>
     </div>

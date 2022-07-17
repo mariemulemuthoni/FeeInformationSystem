@@ -1,0 +1,17 @@
+.inputDob
+{
+    
+        
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        flex-direction: row;
+        display: block;
+        margin: 20px 0;
+    
+    /*make form styling consistent across browsers*/
+        font-family: inherit;
+        font-size: 100%;
+    
+}

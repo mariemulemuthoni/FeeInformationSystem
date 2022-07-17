@@ -1,129 +1,119 @@
 <?php
-include_once 'assets/includes/config.php'
+session_start();
+include_once 'assets/includes/configure.php';
 ?>
-<!DOCTYPE html>
-
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!----======== CSS ======== -->
-    <link rel="stylesheet" href="assets/css/addstyle.css">
-     
-    <!----===== Iconscout CSS ===== -->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
-    <title>Add Students </title>
-</head>
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<!-- My CSS -->
+	<link rel="stylesheet" href="assets/css/style.css">
+    <!--<link rel="stylesheet" href="assets/css/dob.css">-->
+
+	<title>Admin Panel</title>
+  </head>
 <body>
-    <div class="container">
-        <header>Student Registration</header>
 
-        <form action="process.php" method="POST">
-            <div class="form first">
-                <div class="details personal">
-                    <span class="title">Student's Details</span>
 
-                    <div class="fields">
-                        <div class="input-field">
-                            <label>First Name</label>
-                            <input type="text" name="fname" placeholder="Enter student's first name" required>
-                        </div>
+<?php include('assets/includes/head.php');?>
+	
+	<section id="content">
+    <main>
+	<div class="head-title">
+	<div class="left">
+        <h1>Register new Student</h1>
+    <form action="process.php" method="post">
 
-                        <div class="input-field">
-                            <label>Last Name</label>
-                            <input type="text" name="lname" placeholder="Enter student's last name" required>
-                        </div>
 
-                        <div class="input-field">
-                            <label>Date of Birth</label>
-                            <input type="date" name="dob" placeholder="Enter Student's birth date" required>
-                        </div>
+    <div class="col-6">
+    <label for="admissionNumber" class="form-label">Admission Number</label><br>
+    <input type="text" class="form-control" id="admissionNumber" name= "admnumber" required>
+  </div>
+               
+  
+  <div class="col-6">
+    <label for="firstName" class="form-label">First Name</label><br>
+    <input type="text" class="form-control" id="firstName" name= "fname" required>
+  </div>
+  <div class="col-6">
+    <label for="lastName" class="form-label">Last Name</label>
+    <input type="text" class="form-control" id="lastName" name= "lname" required>
+  </div><br>
+  <div class="col-12">
+  <label for="inputDob" class="form-label">Date of Birth</label><br>
+         <span class="inputDob" >
+            <label for="day">Day:</label>
+            <select name="day" id="day" required></select>
+        </span>
+        <span class="inputDob" required>
+            <label for="month">Month:</label>
+            <select name="month" id="month" required></select>
+        </span>
+        <span class="inputDob" required>
+            <label for="year">Year:</label>
+            <select name="year" id="year" required>Year:</select>
+        </span>
+    
+  </div><br>
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">Email</label>
+    <input type="email" class="form-control" id="inputEmail4" name="email" required>
+  </div>
+  <div class="col-md-6">
+    <label for="inputPassword4" class="form-label">Password</label>
+    <input type="password" class="form-control" id="inputPassword4" name="password" required>
+  </div>
+  <div class="col-md-6">
+    <label for="inputAddress" class="form-label">Address</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="address" required>
+  </div>
+  <div class="col-md-6">
+    <label for="inputGender" class="form-label">Class</label>
+    <select id="inputGender" class="form-select" name="class" required>
+      <option selected>Choose...</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+    </select>
+  </div>
+  <div class="col-md-6">
+    <label for="inputGender" class="form-label">Gender</label>
+    <select id="inputGender" class="form-select" name="gender" required>
+      <option selected>Choose...</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select>
+  </div>
+  <div class="col-6">
+    <label for="parentName" class="form-label">Parent Name</label><br>
+    <input type="text" class="form-control" id="parentName" name= "pname" required>
+  </div>
+  <div class="row g-3">
+  <label for="inputPhone" class="form-label">Phone Number</label>
+  <div class="col-2">
+    <input type="text" class="form-control" placeholder="code" value="+254" required>
+  </div>
+  <div class="col-4">
+    <input type="text" class="form-control" placeholder="phone number" name="pnumber" required>
+  </div>
+</div><br>
+  <div class="col-12">
+    <input type="submit" class="btn btn-primary" value="Register" name="submit" required>
+  </div>
+</form>
+           </main>
+                </section>
 
-                        <div class="input-field">
-                            <label>Gender</label>
-                            <select name="gender" required>
-                                <option disabled selected>Select student's gender</option>
-                                <option value ="Male">Male</option>
-                                <option value ="Female">Female</option>
-                                <option value="Others">Others</option>
-                            </select>
-                        </div>
-                        <div class="input-field">
-                            <label>Admission Number</label>
-                            <input type="number" name="admnumber" placeholder="Enter student's admission number" required>
-                        </div>
-                        <div class="input-field">
-                            <label>Class</label>
-                            <input type="number" name="class" placeholder="Enter student's class" required>
-                        </div>
 
-                    </div>
-                    <button class="nextBtn">
-                        <span class="btnText">Next</span>
-                        <i class="uil uil-navigator"></i>
-                    </button>
-                </div>
-        </div>
-        <div class="form second">
-                <div class="details ID">
-                    <span class="title">Parents Details</span>
+	
 
-                    <div class="fields">
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+   <script src="assets/js/script.js"></script>
+   <script src="assets/js/dob.js"></script>
 
-                        <div class="input-field">
-                            <label>Parent's First Name</label>
-                            <input type="text"name="pfname" placeholder="Enter Parent's First name" required>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Parent's Last Name</label>
-                            <input type="text" name="plname" placeholder="Enter Parent's Last name" required>
-                        </div>
-
-                        <div class="input-field">
-                            <label> Parent's Mobile Number</label>
-                            <input type="number" name="pmobile" placeholder="Enter parent's Mobile number" required>
-                        </div>
-                        
-                        <div class="input-field">
-                            <label>Parent Email</label>
-                            <input type="text" name="pemail" placeholder="Enter Parent's email" required>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Parent's Address</label>
-                            <input type="text" name="paddress" placeholder="Enter Parent's Address" required>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Password</label>
-                            <input type="password"name="password" placeholder="Enter Student's Password" required>
-                        </div>
-
-                    </div>
-                </div>
-
-                        <div class="buttons">
-                          <div class="backBtn">
-                            <i class="uil uil-navigator"></i>
-                            <span class="btnText">Back</span>
-                          </div>
-                        
-                          <button class="submit" name="submit" type="submit">
-                            <span class="btnText">Submit</span>
-                            <i class="uil uil-navigator"></i>
-                          </button>
-                        </div>
-        </div> 
-    </div>
-
-            
-        </form>
-    </div>
-
-    <script src="assets/js/addscript.js"></script>
-</body>
+ </body>
 </html>
