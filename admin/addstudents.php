@@ -26,7 +26,7 @@ include_once 'assets/includes/configure.php';
 	<div class="head-title">
 	<div class="left">
         <h1>Register new Student</h1>
-    <form action="process.php" method="post">
+    <form action="assets/includes/student_process.php" method="post">
 
 
     <div class="col-6">
@@ -59,13 +59,10 @@ include_once 'assets/includes/configure.php';
         </span>
     
   </div><br>
-  <div class="col-md-6">
-    <label for="inputEmail4" class="form-label">Email</label>
-    <input type="email" class="form-control" id="inputEmail4" name="email" required>
-  </div>
+  
   <div class="col-md-6">
     <label for="inputPassword4" class="form-label">Password</label>
-    <input type="password" class="form-control" id="inputPassword4" name="password" required>
+    <input type="password" class="form-control" id="inputPassword" name="password" required>
   </div>
   <div class="col-md-6">
     <label for="inputAddress" class="form-label">Address</label>
@@ -73,11 +70,7 @@ include_once 'assets/includes/configure.php';
   </div>
   <div class="col-md-6">
     <label for="inputGender" class="form-label">Class</label>
-    <select id="inputGender" class="form-select" name="class" required>
-      <option selected>Choose...</option>
-      <option value="1">1</option>
-      <option value="2">2</option>
-    </select>
+    <input type="number" class="form-control" id="inputClass" placeholder="class" name="class" required>
   </div>
   <div class="col-md-6">
     <label for="inputGender" class="form-label">Gender</label>
@@ -87,19 +80,6 @@ include_once 'assets/includes/configure.php';
       <option value="Female">Female</option>
     </select>
   </div>
-  <div class="col-6">
-    <label for="parentName" class="form-label">Parent Name</label><br>
-    <input type="text" class="form-control" id="parentName" name= "pname" required>
-  </div>
-  <div class="row g-3">
-  <label for="inputPhone" class="form-label">Phone Number</label>
-  <div class="col-2">
-    <input type="text" class="form-control" placeholder="code" value="+254" required>
-  </div>
-  <div class="col-4">
-    <input type="text" class="form-control" placeholder="phone number" name="pnumber" required>
-  </div>
-</div><br>
   <div class="col-12">
     <input type="submit" class="btn btn-primary" value="Register" name="submit" required>
   </div>

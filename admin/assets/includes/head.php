@@ -84,6 +84,7 @@
       </div>
     </div>
   </div>
+  
  <!-- <div class="accordion-item">
     <h2 class="accordion-header" id="headingFive">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
@@ -111,8 +112,8 @@
     </h2>
     <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-      <li><a class="dropdown-item" href="">Download Fees Report</a></li>
-              <li><a class="dropdown-item" href="viewFeesreport.php">View Fees Report</a></li>
+      
+       <li><a class="dropdown-item" href="viewFeesreport.php">View Fees Report</a></li>
       </div>
     </div>
   </div>
@@ -137,7 +138,7 @@
 			<i class='bx bx-menu' ></i>
 			
 			<form action="#">
-				<div class="form-input">
+				<div class="form-input ">
 					<input type="search" placeholder="Search...">
 					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
 				</div>
