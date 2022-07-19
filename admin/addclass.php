@@ -32,10 +32,6 @@ include_once 'assets/includes/configure.php';
     <label for="exampleInputClass" class="form-label">Class Name</label>
     <input type="text" class="form-control" id="exampleInputClass"  name="cname" placeholder="Class Name" >
   </div>
-  <div class="mb-3">
-    <label for="exampleInputTerm" class="form-label">Term </label>
-    <input type="text" class="form-control" id="exampleInputTerm"  name="term" placeholder="Term" >
-  </div>
   <button type="submit" class="btn btn-primary" name="submit" >Submit</button>
 </form>
 

@@ -12,7 +12,7 @@ if(isset($_GET['id'])){
 	$id = validate($_GET['id']);
 
 	$sql = "DELETE FROM tbl_student
-	        WHERE id=$id";
+	        WHERE stud_ID=$id";
    $result = mysqli_query($conn, $sql);
    if ($result) {
    	  header("Location: managestudents.php?success=successfully deleted");

@@ -24,50 +24,6 @@ include_once 'assets/includes/configure.php';
 <section id="content">
   <main>
   <div class="left table-responsive">
-          <table class="table table-hover w-auto">
-              <div><h2>Total School Fee Paid to the school</h2></div>
-           <thead>
-           <?php
-            $sql = "SELECT * FROM tbl_payment ";
-            $result = mysqli_query($conn, $sql);
-            $resultCheck = mysqli_num_rows($result);
-            ?>
-                <tr>
-                    <th scope="col" >Payment ID</th>
-                    <th scope="col" >Fee ID</th>
-                    <th scope="col" >Student ID</th>
-                    <th scope="col" >Term ID</th>
-                    <th scope="col" >Payment Mode</th>
-                    <th scope="col" >Amount Paid</th>
-                    <th scope="col" >Date Paid</th>
-                    <th scope="col" >Admin ID</th>
-                    <th scope="col" >Reference Number</th>
-                </tr>
-            </thead>
-            <tbody>
-              <?php
-               if ($resultCheck > 0) {
-                while ($rows = mysqli_fetch_assoc($result))
-                {
-              ?>
-                <tr>
-                <td ><?php echo $rows['paymentID']; ?></td>
-                <td ><?php echo $rows['feeID']; ?></td>
-                <td ><?php echo $rows['stud_ID']; ?></td>
-                <td ><?php echo $rows['term_ID']; ?></td>
-                <td ><?php echo $rows['paymentMode']; ?></td>
-                <td ><?php echo $rows['amountPaid']; ?></td>
-                <td ><?php echo $rows['datePaid']; ?></td>
-                <td ><?php echo $rows['adm_ID']; ?></td>
-                <td ><?php echo $rows['referenceNumber']; ?></td>
-
-                <?php
-                 }
-                }
-               ?>
-                
-            </tbody>
-        </table>
        <table class="table table-hover w-auto">
               <div><h2>Term 1</h2></div>
            <thead>

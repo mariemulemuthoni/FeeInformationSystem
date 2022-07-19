@@ -64,21 +64,14 @@ if (isset($_SESSION['adm_ID']) && isset($_SESSION['Adm_UName'])) {
 					<i class='bx bxs-folder'></i>
 					<span class="text">
 						<h3>Payment Methods</h3>
-						<p><a href="managepayments.php">payment methods</a></p>
+						<p><a href="managePaymentMethod.php">payment methods</a></p>
 					</span>
 				</li>
 				<li>
 					<i class='bx bx-folder' ></i>
 					<span class="text">
 						<h3>Total Fees Paid</h3>
-						<p><a href="viewFeepayment.php">View Total Fees Paid</a></p>
-					</span>
-				</li>
-				<li>
-					<i class='bx bx-folder-open' ></i>
-					<span class="text">
-						<h3>Total Feess Balance</h3>
-						<p> <a href="viewFeebalance.php">View Fees Balance</a></p>
+						<p><a href="viewTotalfee.php">View Total Fees Paid</a></p>
 					</span>
 				</li>
 				<li>
@@ -92,7 +85,7 @@ if (isset($_SESSION['adm_ID']) && isset($_SESSION['Adm_UName'])) {
 					<i class='bx bxs-file-pdf'></i>
 					<span class="text">
 						<h3>Fees Report</h3>
-						<p><a href = "viewFeesreport.php">Generate Fees Report</a></p>
+						<p><a href = "viewFeesreport.php">View Fees Report</a></p>
 					</span>
 				</li>
 	

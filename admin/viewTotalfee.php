@@ -1,6 +1,6 @@
 <?php
 include_once 'assets/includes/configure.php';
-$sql = "SELECT * FROM tbl_class; ";
+$sql = "SELECT * FROM tbl_payment ";
 $result = mysqli_query($conn, $sql);
 $resultCheck = mysqli_num_rows($result);
 ?>
@@ -28,14 +28,18 @@ $resultCheck = mysqli_num_rows($result);
   <main>
   <div class="left table-responsive">
        <table class="table table-hover w-auto">
-
+              <div><h2>Total School Fee Paid to the school</h2></div>
            <thead>
                 <tr>
-                    <th scope="col" >Class ID</th>
-                    <th scope="col" >Class Name</th>
-                    <th scope="col" >Class Date Created</th>
-                    <th scope="col" >Class Update Date</th>
-                    
+                    <th scope="col" >Payment ID</th>
+                    <th scope="col" >Fee ID</th>
+                    <th scope="col" >Student ID</th>
+                    <th scope="col" >Term ID</th>
+                    <th scope="col" >Payment Mode</th>
+                    <th scope="col" >Amount Paid</th>
+                    <th scope="col" >Date Paid</th>
+                    <th scope="col" >Admin ID</th>
+                    <th scope="col" >Reference Number</th>
                 </tr>
             </thead>
             <tbody>
@@ -45,14 +49,15 @@ $resultCheck = mysqli_num_rows($result);
                 {
               ?>
                 <tr>
-                <td><?php echo $rows['class']; ?></th>
-                <td><?php echo $rows['class_Name']; ?></th>
-                <td><?php echo $rows['class_DateCreated']; ?></th>
-                <td><?php echo $rows['class_UpdateDate']; ?></th>
-                
-                <td><a href= "edit.php?id=<?=$rows['class']?>" class="btn btn-info">Edit</a></td>
-                <td><a href= "" class="btn btn-danger">Delete</a></td>
-                
+                <td ><?php echo $rows['paymentID']; ?></td>
+                <td ><?php echo $rows['feeID']; ?></td>
+                <td ><?php echo $rows['stud_ID']; ?></td>
+                <td ><?php echo $rows['term_ID']; ?></td>
+                <td ><?php echo $rows['paymentMode']; ?></td>
+                <td ><?php echo $rows['amountPaid']; ?></td>
+                <td ><?php echo $rows['datePaid']; ?></td>
+                <td ><?php echo $rows['adm_ID']; ?></td>
+                <td ><?php echo $rows['referenceNumber']; ?></td>
 
                 <?php
                  }
@@ -61,7 +66,7 @@ $resultCheck = mysqli_num_rows($result);
                 
             </tbody>
         </table>
-    </div>
+        </div>
 
 
 

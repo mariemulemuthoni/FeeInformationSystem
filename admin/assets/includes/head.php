@@ -79,12 +79,12 @@
     </h2>
     <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-      <li><a class="dropdown-item" href=""> Total Fees per Class</a></li>
-              <li><a class="dropdown-item" href="">Total Fees for the School</a></li>
+      <li><a class="dropdown-item" href="viewFeeperterm.php"> Total Fees per Term</a></li>
+              <li><a class="dropdown-item" href="viewTotalfee.php"> Total Fees for the School</a></li>
       </div>
     </div>
   </div>
-  <div class="accordion-item">
+ <!-- <div class="accordion-item">
     <h2 class="accordion-header" id="headingFive">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
       <a href=""> 
@@ -99,7 +99,7 @@
      <li><a class="dropdown-item" href=""> Total Fees Balance</a></li>
       </div>
     </div>
-  </div>
+  </div>-->
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingSix">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
@@ -112,7 +112,7 @@
     <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
       <div class="accordion-body">
       <li><a class="dropdown-item" href="">Download Fees Report</a></li>
-              <li><a class="dropdown-item" href="">View Fees Report</a></li>
+              <li><a class="dropdown-item" href="viewFeesreport.php">View Fees Report</a></li>
       </div>
     </div>
   </div>
@@ -155,8 +155,7 @@
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Profile</a>
     <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">View Profile</a></li>
-      <li><a class="dropdown-item" href="#">Change Password</a></li>
+      <li><a class="dropdown-item" href="changepassword.php">Change Password</a></li>
       <li><a class="dropdown-item" href="logout.php">Log out</a></li>
     </ul>
   </li>

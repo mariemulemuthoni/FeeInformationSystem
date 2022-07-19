@@ -1,6 +1,6 @@
 <?php
 include_once 'assets/includes/configure.php';
-$sql = "SELECT * FROM tbl_student; ";
+$sql = "SELECT * FROM tbl_parentcontacts; ";
 $result = mysqli_query($conn, $sql);
 $resultCheck = mysqli_num_rows($result);
 ?>
@@ -31,46 +31,28 @@ $resultCheck = mysqli_num_rows($result);
 
            <thead>
                 <tr>
-                    <th scope="col" >Student ID</th>
-                    <th scope="col" >First Name</th>
-                    <th scope="col" >Last Name</th>
-                    <th scope="col" >Date of Birth</th>
-                    <th scope="col" >Gender</th>
-                    <th scope="col" >Parent's First Name</th>
-                    <th scope="col" >Parent's Last Name</th>
+                    <th scope="col" >#</th>
+                    <th scope="col" >Parent Name</th>
                     <th scope="col" >Parent's Contact</th>
                     <th scope="col" >Parent's Email</th>
-                    <th scope="col" >Student's Address</th>
-                    <th scope="col" >Registeration Date</th>
-                    <th scope="col" >Password</th>
-                    <th scope="col" >Update Date</th>
                     <th scope="col" >Admission Number</th>
-                    <th scope="col" >Class</th>
                 </tr>
             </thead>
             <tbody>
-              <?php
+            <?php
                if ($resultCheck > 0) {
+                $i = 0;
                 while ($rows = mysqli_fetch_assoc($result))
                 {
+                  $i++;
               ?>
                 <tr>
-                <th scope="row"><?php echo $rows['stud_ID']; ?></th>
-                <th scope="row"><?php echo $rows['stud_FName']; ?></th>
-                <th scope="row"><?php echo $rows['stud_LName']; ?></th>
-                <th scope="row"><?php echo $rows['stud_DateofBirth']; ?></th>
-                <th scope="row"><?php echo $rows['stud_Gender']; ?></th>
-                <th scope="row"><?php echo $rows['stud_ParentFName']; ?></th>
-                <th scope="row"><?php echo $rows['stud_ParentLName']; ?></th>
-                <th scope="row"><?php echo $rows['stud_ParentContact']; ?></th>
-                <th scope="row"><?php echo $rows['stud_ParentEmail']; ?></th>
-                <th scope="row"><?php echo $rows['stud_Address']; ?></th>
-                <th scope="row"><?php echo $rows['stud_RegDate']; ?></th>
-                <th scope="row"><?php echo $rows['stud_Password']; ?></th>
-                <th scope="row"><?php echo $rows['stud_UpdateDate']; ?></th>
-                <th scope="row"><?php echo $rows['stud_AdmissionNumber']; ?></th>
-                <th scope="row"><?php echo $rows['class']; ?></th>
-                <!--<th scope="row"><?php// echo $rows['class_ID']; ?></th>-->
+                <th scope = "row"><?=$i?></th>
+                <td ><?php echo $rows['Parent_name']; ?></td>
+                <td ><?php echo $rows['Parent_number']; ?></td>
+                <td ><?php echo $rows['Parent_email']; ?></td>
+                <td ><?php echo $rows['stud_AdmNumber']; ?></td>
+                <!--<th ><?php// echo $rows['class_ID']; ?></th>-->
 
                 <?php
                  }
