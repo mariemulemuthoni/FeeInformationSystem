@@ -85,7 +85,7 @@
     </div>
   </div>
   
- <!-- <div class="accordion-item">
+ <div class="accordion-item">
     <h2 class="accordion-header" id="headingFive">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
       <a href=""> 
@@ -96,11 +96,10 @@
     </h2>
     <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-      <li><a class="dropdown-item" href=""> Total Fees Balance per class</a></li>
-     <li><a class="dropdown-item" href=""> Total Fees Balance</a></li>
+     <li><a class="dropdown-item" href="viewFeebalance.php"> Total Fees Balance</a></li>
       </div>
     </div>
-  </div>-->
+  </div>
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingSix">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
@@ -114,6 +113,22 @@
       <div class="accordion-body">
       
        <li><a class="dropdown-item" href="viewFeesreport.php">View Fees Report</a></li>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingSeven">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+      <a href=""> 
+      <i class='bx bx-folder-open' ></i>
+                <span class="text">Parent's Contact</span>
+      </a>
+      </button>
+    </h2>
+    <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+     <li><a class="dropdown-item" href="addparentscontacts.php"> Add Parent's contact</a></li>
+     <li><a class="dropdown-item" href="viewParentscontacts.php"> View Parent's contact</a></li>
       </div>
     </div>
   </div>

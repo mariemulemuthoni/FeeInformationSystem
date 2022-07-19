@@ -1,69 +1,66 @@
+<?php
+include_once 'assets/includes/configure.php';
+?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<!-- My CSS -->
+	<link rel="stylesheet" href="assets/css/style.css">
+
+	<title>Admin Panel</title>
+  </head>
+<body>
 
 
-$Pfname = $_POST['pfname'];
-    $Plname = $_POST['plname'];
-    $Pmobile = $_POST['pmobile'];
-    $Pemail=$_POST['pemail'];
-    $Paddress = $_POST['paddress'];
+<?php include('assets/includes/head.php');?>
+
+
+
+<section id="content">
+
+		<!-- MAIN -->
+		<main>
+			<div class="head-title">
+				<div class="left">
+                <form method="post" action="assets/includes/contact_process.php">
+                    <h1>Add a Parent's contact Information</h1>
+  <div class="mb-3">
+    <label for="exampleInputPname" class="form-label">Parent's Name</label>
+    <input type="text" class="form-control" id="exampleInputClass"  name="pname" placeholder="Parent's name" >
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPnumber" class="form-label">Parent's Number</label>
+    <input type="text" class="form-control" id="exampleInputClass"  name="pnumber" placeholder="Parent's number" >
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPemail" class="form-label">Parent's Email</label>
+    <input type="text" class="form-control" id="exampleInputClass"  name="pemail" placeholder="Parent's email" >
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputadmnumber" class="form-label">Student's Admission Number</label>
+    <input type="text" class="form-control" id="exampleInputClass"  name="admnumber" placeholder="Student's admission number" >
+  </div>
+  <button type="submit" class="btn btn-primary" name="submit" >Submit</button>
+</form>
 
 
 
 
+  </main>
+    </section>
 
 
+	
 
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+   <script src="assets/js/script.js"></script>
 
-
-
-
-<div class="form second">
-                <div class="details ID">
-                    <span class="title">Parents Details</span>
-
-                    <div class="fields">
-
-                        <div class="input-field">
-                            <label>Parent's First Name</label>
-                            <input type="text"name="pfname" placeholder="Enter Parent's First name" required>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Parent's Last Name</label>
-                            <input type="text" name="plname" placeholder="Enter Parent's Last name" required>
-                        </div>
-
-                        <div class="input-field">
-                            <label> Parent's Mobile Number</label>
-                            <input type="number" name="pmobile" placeholder="Enter parent's Mobile number" required>
-                        </div>
-                        
-                        <div class="input-field">
-                            <label>Parent Email</label>
-                            <input type="text" name="pemail" placeholder="Enter Parent's email" required>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Parent's Address</label>
-                            <input type="text" name="paddress" placeholder="Enter Parent's Address" required>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Password</label>
-                            <input type="password"name="password" placeholder="Enter Student's Password" required>
-                        </div>
-
-                    </div>
-                </div>
-
-                        <div class="buttons">
-                          <div class="backBtn">
-                            <i class="uil uil-navigator"></i>
-                            <span class="btnText">Back</span>
-                          </div>
-                        
-                          <button class="submit" name="submit" type="submit">
-                            <span class="btnText">Submit</span>
-                            <i class="uil uil-navigator"></i>
-                          </button>
-                        </div>
-        </div> 
+ </body>
+</html>
