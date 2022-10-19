@@ -35,6 +35,7 @@ $resultCheck = mysqli_num_rows($result);
                     <th scope="col" >Class Name</th>
                     <th scope="col" >Class Date Created</th>
                     <th scope="col" >Class Update Date</th>
+                    <th scope="col" >Action</th>
                     
                 </tr>
             </thead>
@@ -49,9 +50,7 @@ $resultCheck = mysqli_num_rows($result);
                 <td><?php echo $rows['class_Name']; ?></th>
                 <td><?php echo $rows['class_DateCreated']; ?></th>
                 <td><?php echo $rows['class_UpdateDate']; ?></th>
-                
-                <td><a href= "edit.php?id=<?=$rows['class']?>" class="btn btn-info">Edit</a></td>
-                <td><a href= "" class="btn btn-danger">Delete</a></td>
+                <td><a href= "deleteclass.php?id=<?=$rows['class']?>" class="btn btn-danger">Delete</a></td>
                 
 
                 <?php

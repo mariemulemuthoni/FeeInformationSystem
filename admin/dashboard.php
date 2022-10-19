@@ -61,7 +61,7 @@ if (isset($_SESSION['adm_ID']) && isset($_SESSION['Adm_UName'])) {
 					<i class='bx bxs-folder'></i>
 					<span class="text">
 						<h3>Payment Methods</h3>
-						<p><a href="managePaymentMethod.php">payment methods</a></p>
+						<p><a href="managePaymentMethod.php">View payment methods</a></p>
 					</span>
 				</li>
 				<li>

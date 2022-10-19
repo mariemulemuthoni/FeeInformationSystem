@@ -29,7 +29,7 @@
       </a>
       </button>
     </h2>
-    <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
       <div class="accordion-body">
       <li><a class="dropdown-item" href="addclass.php">Add class</a></li>
               <li><a class="dropdown-item" href="manageclasses.php">Manage classes</a></li>
@@ -61,7 +61,7 @@
       </a>
       </button>
     </h2>
-    <div id="collapseThree" class="accordion-collapse collapse " aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
       <div class="accordion-body">
       <li><a class="dropdown-item" href="addPaymentMethod.php">Add Payment Method</a></li>
               <li><a class="dropdown-item" href="managePaymentMethod.php">Manage Payment methods</a></li>
@@ -120,7 +120,7 @@
     <h2 class="accordion-header" id="headingSeven">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
       <a href=""> 
-      <i class='bx bx-folder-open' ></i>
+      <i class='bx bxs-message-dots'></i>
                 <span class="text">Parent's Contact</span>
       </a>
       </button>

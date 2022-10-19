@@ -45,8 +45,7 @@ $resultCheck = mysqli_num_rows($result);
                 <tr>
                 <td><?php echo $rows['Method_ID']; ?></td>
                 <td><?php echo $rows['Payment_methodName']; ?></td>
-                <td><a href= "edit.php?id=<?=$rows['Method_ID']?>" class="btn btn-info">Edit</a></td>
-                <td><a href= "" class="btn btn-danger">Delete</a></td>
+                <td><a href= "deletemethod.php?id=<?=$rows['Method_ID']?>" class="btn btn-danger">Delete</a></td>
 
                 <?php
                  }
